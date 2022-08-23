@@ -1,0 +1,21 @@
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Nunito', sans-serif;
+
+	font-size: 2rem;
+	font-weight: 400;
+	line-height: 1.6;
+}
+
+.App {
+	width: 100vw;
+	height: 100vh;
+}
+
+.container {
+	display: flex;
+	grid-template-columns: minmax(26rem, 30rem) 1fr;
+}
