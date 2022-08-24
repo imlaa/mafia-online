@@ -1,14 +1,12 @@
-import React, {LegacyRef, MouseEventHandler} from 'react';
+import React from 'react';
 import classes from './logo.module.scss';
 
 import logo from '../../assets/logo/logo.svg';
 import logoHover from '../../assets/logo/logo-hover.svg';
 
 export const Logo:React.FC = () => {
-	// const navigate = useNavigate();
 	const imageRef = React.useRef<any>(null);
 	const circleRef = React.useRef<any>(null);
-	const buttonRef = React.useRef<any>(null);
 
 	React.useEffect(() => {
 		const imgPos = imageRef.current?.getBoundingClientRect();
@@ -23,14 +21,7 @@ export const Logo:React.FC = () => {
 			circleRef.current?.setAttribute('cy', e.clientY - imgY - rectHalfHeight);
 		};
 
-		const handleButtonClick = (e:React.MouseEvent) => {
-			const buttonCoordinates = buttonRef.current.getBoundingClientRect();
-			if (e.clientX < buttonCoordinates.left || e.clientX > buttonCoordinates.right) return;
-			if (e.clientY < buttonCoordinates.top || e.clientY > buttonCoordinates.bottom) return;
-		};
-
 		imageRef.current?.addEventListener('mousemove', handleHover, false);
-		imageRef.current?.addEventListener('click', handleButtonClick);
 
 		return () => {
 			imageRef.current?.removeEventListener('mousemove', handleHover);
