@@ -1,8 +1,20 @@
-.logo {
-	color: var(--purple);
+.logo_container {
+	position: relative;
+	z-index: 0;
+}
 
-	font-size: 3rem;
-	font-weight: 700;
+.svg {
+	width: 235px;
+	height: 95px;
+}
 
-	cursor: pointer;
+.logo_image:hover {
+	mask: url("#cursorMask");
+}
+
+.logo_img {
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
 }
