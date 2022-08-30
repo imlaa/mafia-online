@@ -1,14 +1,13 @@
 import React from 'react';
 import classes from './sidebar-item.module.scss';
 
-interface SidebarItemProps {
-	title: string
-}
+import { Link } from 'react-router-dom';
+import {ILink} from "../../../models";
 
-const SidebarItem:React.FC<SidebarItemProps> = React.memo(({ title }) => {
+export const SidebarItem:React.FC<ILink> = React.memo(({ title, link }) => {
 	return (
-		<div className={classes.sidebar_item}>
-			item
-		</div>
+		<Link className={classes.sidebar_item} to={link}>
+			{title}
+		</Link>
 	);
 });
