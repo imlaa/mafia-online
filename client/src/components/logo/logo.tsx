@@ -1,8 +1,8 @@
 import React from 'react';
 import classes from './logo.module.scss';
 
-import logo from '../../assets/logo/logo.svg';
-import logoHover from '../../assets/logo/logo-hover.svg';
+import logo from '@/assets/logo/logo.svg';
+import logoHover from '@/assets/logo/logo-hover.svg';
 
 export const Logo:React.FC = () => {
 	const imageRef = React.useRef<any>(null);
@@ -34,12 +34,12 @@ export const Logo:React.FC = () => {
 				<defs>
 					<mask id="cursorMask" maskUnits="objectBoundingBox">
 						<g>
-							<rect x="0" y="0" width="210" height="95" fill="#FFFFFF" />
+							<rect x="0" y="0" width="300" height="75" fill="#FFFFFF" />
 							<circle ref={circleRef} cx="0" cy="0" r="50" fill="#000000" />
 						</g>
 					</mask>
 				</defs>
-				<image className={classes.logo_image} ref={imageRef} width="235" height="95" xlinkHref={logo} />
+				<image className={classes.logo_image} ref={imageRef} width="300" height="75" xlinkHref={logo} />
 			</svg>
 			<img src={logoHover} alt="logo" className={classes.logo_img} />
 		</div>
