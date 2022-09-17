@@ -1,0 +1,16 @@
+.sidebar_item {
+	margin-bottom: 1.5rem;
+	padding-left: 4rem;
+
+	font-size: 2.5rem;
+	font-weight: 700;
+
+	color: var(--purple-400);
+
+	transition: all .2s linear;
+
+	&:hover {
+		color: var(--purple-500);
+		background-color: var(--purple-100);
+	}
+}

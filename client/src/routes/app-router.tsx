@@ -1,8 +1,8 @@
 import React from 'react';
 
-import {Route, Routes} from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
-import { Sidebar } from '../modules';
+import { Sidebar } from '@/modules';
 
 import { publicRoutes } from './routes';
 
