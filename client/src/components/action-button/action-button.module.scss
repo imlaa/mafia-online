@@ -1,0 +1,25 @@
+.action_button {
+	height: 4rem;
+
+	display: flex;
+	align-items: center;
+
+	padding: 0 1.4rem;
+
+	font-size: 1.5rem;
+	font-weight: 700;
+
+	border: .1rem solid var(--purple-500);
+	border-radius: 2.4rem;
+	cursor: pointer;
+
+	transition: all .2s linear;
+
+	& svg {
+		margin-right: 1rem;
+	}
+
+	&:hover {
+		background-color: var(--purple-50);
+	}
+}
